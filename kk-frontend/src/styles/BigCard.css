@@ -1,0 +1,97 @@
+.bcontainer {
+    background: #EDC988;
+    color: #132743;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-right: 2rem;
+    width: 70rem;
+    height: 35rem;
+}
+
+.information {
+    margin-left: -10rem;
+}
+
+.petfood {
+    margin-left: -18rem;
+    /* margin-top: -2rem; */
+}
+
+.title {
+    font-size: 2rem;
+    margin-top: -2rem;
+    margin-left: -15rem;
+}
+
+.description {
+    margin-top: -4rem;
+    margin-left: -10rem;
+    font-size: 30px;
+}
+
+.mode button img {
+    width: 40px;
+    height: 40px;
+}
+
+.mode button {
+    background: transparent;
+    width: 50px;
+    height: 60px;
+    padding: 10px 5px;
+}
+
+.mode p {
+    padding-left: 1rem;
+}
+
+.mode {
+    display: inline-flex;
+    align-items: center;
+}
+
+.sensor button img {
+    width: 40px;
+    height: 40px;
+}
+
+.sensor button {
+    background: transparent;
+    width: 50px;
+    height: 60px;
+    padding: 10px 5px;
+}
+
+.sensor p {
+    padding-left: 1rem;
+}
+
+.sensor {
+    display: flex;
+    align-items: center;
+}
+
+.food-tank img {
+    width: 55px;
+    height: 55px;
+}
+
+.food-tank {
+    display: inline-flex;
+    align-items: center;
+}
+
+.tank {
+    padding-left: 1rem;
+}
+
+#green {
+    color: green;
+}
+
+#red {
+    color: red;
+}
