@@ -23,7 +23,7 @@
 }
 
 .status {
-    position: absolute;
+    /* position: absolute; */
     bottom: 31rem;
     right: 1rem;
 }

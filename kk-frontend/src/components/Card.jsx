@@ -22,8 +22,8 @@ const Card = ({name, mode, pet_status}) => {
                 <div className='item' id='info'>
                     <h3>{name}</h3>
                     <p>{mode} mode</p>
+                    <div className='status'><img src="https://i.imgur.com/N34i12t.png" alt="" /></div>
                 </div>
-                <div className='status'><img src="https://i.imgur.com/N34i12t.png" alt="" /></div>
             </div>
         )
     } 

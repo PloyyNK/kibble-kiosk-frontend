@@ -6,7 +6,7 @@ import Card from './components/Card'
 function App() {
 
   return (
-    <Card name="Bedroom" mode="Manual" pet_status="true" />
+    <Card name="Bedroom" mode="Auto" pet_status="true" />
   )
 }
 
