@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Itim&display=swap');
+
+.container {
+    font-family:'Atma', cursive;
+    color: #D7385E;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    color: #D7385E;
+  }
+  .header h1 {
+    padding: 0px;
+    font-size: 50px;
+    text-align: center;
+    color: #D7385E;
+    font-family:'Atma', cursive;
+  }
+  .header p {
+    padding: 0px;
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: #132743;
+    font-family:'Atma', cursive;
+
+  }
+  .header img {
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+
+  .description {
+    background-color: #EDC988;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+  }
+  /* .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+  .about-section h2 {
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+  .about-section p {
+    font-size: 20px;
+    padding-bottom: 30px;
+  } */

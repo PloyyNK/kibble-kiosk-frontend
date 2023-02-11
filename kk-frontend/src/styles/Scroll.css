@@ -46,7 +46,7 @@
     transition: opacity 1s, transform 1s;     
 } */
 
-.scroll-to-top-btn {
+/* .scroll-to-top-btn {
     display:none;
     position: fixed;
     bottom: 20px;
@@ -56,4 +56,4 @@
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-}
+} */

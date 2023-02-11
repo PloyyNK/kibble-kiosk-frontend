@@ -1,31 +1,31 @@
-import React from "react";
-import '../styles/Scroll-To-Top-Button.css';
-// import Button from "./Button";
+// import React from "react";
+// import '../styles/Scroll.css';
+// // import Button from "./Button";
 
 
-const ScrollToTopButton = () => {
-    return(
-        // <ul>
-            <button id="scroll-to-top-btn">Back To Home</button>
-        // </ul>
-    )
-}
+// const Scroll = () => {
+//     return(
+//         // <ul>
+//             <button id="scroll-to-top-btn">Back To Home</button>
+//         // </ul>
+//     )
+// }
 
-document.getElementById("scroll-to-top-btn").addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+// document.getElementById("scroll-to-top-btn").addEventListener("click", function() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// });
 
-window.onscroll = function() {
-    let btn = document.getElementById("scroll-to-top-btn");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
-    }
-};
+// window.onscroll = function() {
+//     let btn = document.getElementById("scroll-to-top-btn");
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         btn.style.display = "block";
+//     } else {
+//         btn.style.display = "none";
+//     }
+// };
 
 
 // const scrollTop = function () {
@@ -80,4 +80,4 @@ window.onscroll = function() {
 // }
 
 
-export default ScrollToTopButton;
+// export default Scroll;
