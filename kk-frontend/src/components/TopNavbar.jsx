@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/TopNavbar.css';
-import logo from "/logo.png";
+import Logo from "/logo.png"
 // import { Link } from "react-router-dom";
 // import Button from "./Button";
 
@@ -12,69 +12,55 @@ const TopNavbar = () => {
           <img className="logo" src={logo} />
         </Link>
       </ul> */}
-    <nav class="navbar">
-    <a href="#section1" id ="w1">HOME</a>
-    <a href="#section2" id ="w2">ABOUT</a>
-    <a href="#section3" id ="w3">DEVICE/S</a>
-    <a href="#section4" id ="w4">PETS'S BEHAVIOR</a>
-  </nav>
-  
 
-    <div class="section1" id="section1">
+      <div className="navbar">
+        <div className="logo">
+          <a href="#KibbleKiosk">
+          <img src={Logo} alt="Kibble Kiosk Logo"/>
+          </a>
+        </div>
+      <ul>
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#devices">DEVICE/S</a>
+      <a href="#pets">PETS'S BEHAVIORS</a>
+      </ul>
+      </div>
+
+    
+    {/* <div className="KibbleKiosk" id="KibbleKiosk">
+    <h2>LOGO</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero.</p>
+    </div> */}
+
+
+    <div className="home" id="home">
     <h2>HOME</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero.</p>
     </div>
 
-    <div class="section2" id="section2">
+    <div class="about" id="about">
     <h2>ABOUT</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero.</p>
     </div>
 
-    <div class="section3" id="section3">
+    <div class="devices" id="devices">
     <h2>DEVICE/S</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero.</p>
     </div>
 
-    <div class="section4" id="section4">
+    <div class="pets" id="pets">
     <h2>PETS'S BEHAVIOR</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero.</p>
     </div>
 
     </div>
-
-    // <div>
-    //   <h1> Hello</h1>
-    // <nav className="topnavbar">
-		//   <ul>
-
-		// 	  <li>
-    //     <h1> Hell</h1>
-    //      <Link to= "home">HOME</Link>
-    //       {/* <Link activeClass="active" smooth spy to="home">HOME</Link> */}
-    //     </li>
-
-		// 	  {/* <li> 
-    //      <Link activeClass="active" smooth spy to="devices">DEVICES/S</Link>
-    //     </li>
-
-		// 	  <li>
-    //       <Link activeClass="active" smooth spy to="behavior">BEHAVIOR</Link>
-    //     </li> */}
-		//   </ul>
-            
-    //   <section id="home">HOME</section>
-    //   <section id="devices">DEVICES/S</section>
-    //   <section id="behavior">BEHAVIOR</section>
-  
-	  // </nav>
-    // </div>
-
-  //   <header>
-  //   </header>
-  
     )
   }
+
+
     const navLinks = document.querySelectorAll('.navbar a');
+
     navLinks.forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
@@ -87,10 +73,6 @@ const TopNavbar = () => {
       });
     });
   });
-
-
-
-
     
 
 export default TopNavbar;
