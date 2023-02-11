@@ -10,7 +10,7 @@ const Icon = () => {
   );
 };
 
-const Dropdown = ({ placeHolder ,options}) => {
+const Dropdown = ({ placeHolder ,options, callback, value}) => {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
@@ -29,9 +29,10 @@ const Dropdown = ({ placeHolder ,options}) => {
     return placeHolder;
   };
 
-  const printBruh = (num) => {
+  const printBruh = (num, value) => {
     return (e) => {
-      console.log(num, "bruh")
+      console.log(num, value)
+      callback(num)
     }
   }
 
@@ -49,7 +50,7 @@ const Dropdown = ({ placeHolder ,options}) => {
 
         <div className="dropdown-menu">
           {options.map((option) => (
-            <div key={option.value} onClick={printBruh(option.value)} className="dropdown-option">
+            <div key={option.value} onClick={printBruh(option.value, option.label)} className="dropdown-option">
               <b>{option.label}</b>
             </div>
           ))}

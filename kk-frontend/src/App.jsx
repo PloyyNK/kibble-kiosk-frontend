@@ -7,10 +7,11 @@ import Card from './components/Card'
 import BigCard from './components/BigCard'
 import { is_pet_active } from './services/link'
 import AddCard from './components/AddCard'
+import Dropdown from './components/dropdown'
 
 function App() {
-  let active = is_pet_active(1)
-  console.log(active)
+  // let active = is_pet_active(0)
+  // console.log(active)
   
   return (
 
