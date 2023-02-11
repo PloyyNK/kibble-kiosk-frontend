@@ -1,0 +1,33 @@
+.button {
+    margin: 3rem;
+    color: white;
+    background-color:#D7385E;
+    border: 0;
+    border-color: #132743;
+    border-radius: 2rem;
+    /* padding: 3rem 1.5rem; */
+    padding: 14px 40px;
+    min-width: 25rem;
+    max-width: 30rem;
+    min-height: 5rem;
+    max-height: 5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.button:hover {
+    background-color:#132743;
+    color: #D7385E;
+    outline: solid white;
+    cursor: pointer;
+  }
+
+  .button img {
+    display: flex;
+	justify-content: space-between;
+    padding-left:0rem;
+	height: 3rem;
+	size-adjust: 3rem;
+
+
+  }

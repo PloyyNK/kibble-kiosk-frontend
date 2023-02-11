@@ -7,12 +7,6 @@ import Logo from "/logo.png"
 const TopNavbar = () => {
   return (
     <div>
-       {/* <ul>
-        <Link to="/">
-          <img className="logo" src={logo} />
-        </Link>
-      </ul> */}
-
       <div className="navbar">
         <div className="logo">
           <a href="#KibbleKiosk">
