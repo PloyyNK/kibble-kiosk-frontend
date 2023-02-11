@@ -7,8 +7,12 @@ import BigCard from './components/BigCard'
 function App() {
 
   return (
-    // <Card name="Bedroom" mode="Auto" pet_status="true" />
+
+    <div>
+    {/* <Card name="Living room" mode="Manual" pet_status="false" /> */}
     <BigCard name="Kitchen" food_tank="GOOD"/>
+    </div>
+    
   )
 }
 

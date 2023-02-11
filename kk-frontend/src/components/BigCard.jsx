@@ -7,17 +7,26 @@ function BigCard({name, food_tank}) {
     let [mode, setMode] = useState("Auto")
     let [sensor, setSensor] = useState("on")
     let [sensor_icon, setIcon] = useState("https://i.imgur.com/oKjla0f.png")
+    const tank = food_tank
 
-    let TankColor = ({food_tank}) => {
+    let FoodTankAmount = () => {
+        console.log(food_tank)
         if (food_tank == "GOOD") {
-            return "green"
+            return ("adequate")        
         }
-        else if (food_tank == "WARNING"){
-            return "red"
+        else if (food_tank == "WARNING") {
+            return ("less than 25%")
         }
-    }
+    } 
 
-    console.log(TankColor(food_tank))
+    let Color = () => {
+        if (food_tank == "GOOD") {
+            return ("green")        
+        }
+        else if (food_tank == "WARNING") {
+            return ("red")
+        } 
+    }
 
     const ModeSwitch = () => {
         if (mode == "Auto") {
@@ -63,8 +72,8 @@ function BigCard({name, food_tank}) {
                         <div className='food-tank'>
                             <img src="https://i.imgur.com/RUG2dpz.png" alt="" />
                             <div className='tank'>
-                                <span id={TankColor(food_tank)}><b>{food_tank}</b></span>
-                                <span>: Kibble in the contain is </span>
+                                <span id={Color()}><b>{food_tank}</b></span>
+                                <span>: Kibble in the contain is {FoodTankAmount(tank)}</span>
                             </div>
                         </div>
 
@@ -95,8 +104,8 @@ function BigCard({name, food_tank}) {
                         <div className='food-tank'>
                             <img src="https://i.imgur.com/RUG2dpz.png" alt="" />
                             <div className='tank'>
-                                <span id={TankColor(food_tank)}><b>{food_tank}</b></span>
-                                <span>: Kibble in the contain is </span>
+                                <span id={Color()}><b>{food_tank}</b></span>
+                                <span >: Kibble in the contain is {FoodTankAmount(tank)}</span>
                             </div>
                         </div>
 
