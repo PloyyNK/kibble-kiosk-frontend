@@ -2,12 +2,39 @@ import React from 'react'
 import { useState } from 'react'
 import '../styles/BigCard.css'
 
-function BigCard({name, food_tank}) {
+function BigCard({rID, tank}) {
 
     let [mode, setMode] = useState("Auto")
     let [sensor, setSensor] = useState("on")
     let [sensor_icon, setIcon] = useState("https://i.imgur.com/oKjla0f.png")
-    const tank = food_tank
+
+    const ChangerIDtoName = () => {
+        if (rID == 0){
+            return "Kitchen"
+        }
+        else if (rID == 1){
+            return "Living room"
+        }
+        else if (rID == 2){
+            return "Bedroom"
+        }
+        else if (rID == 3){
+            return "Study room"
+        }
+    }
+
+    let name = ChangerIDtoName();
+
+    let TankTranslate = () => {
+        if (tank == 'true') {
+            return "GOOD"
+        } 
+        else if (tank == 'false') {
+            return "WARNING"
+        }
+    }
+
+    let food_tank = TankTranslate();
 
     let FoodTankAmount = () => {
         console.log(food_tank)
@@ -29,13 +56,19 @@ function BigCard({name, food_tank}) {
     }
 
     const ModeSwitch = () => {
+        const url = "https://ecourse.cpe.ku.ac.th/exceed12/"
+        
         if (mode == "Auto") {
             setMode("Manual")
             console.log("Manual")
+            const set_mode = {auto_refill: false}
+            fetch(url+rID, {method: 'PUT',body: JSON.stringify(set_mode), headers:{"content-type":"application/json"}})
         }
         else if (mode == "Manual") {
             setMode("Auto")
             console.log("Auto")
+            const set_mode = {auto_refill: true}
+            fetch(url+rID, {method: 'PUT',body: JSON.stringify(set_mode), headers:{"content-type":"application/json"}})
         }
     }
 
@@ -44,11 +77,16 @@ function BigCard({name, food_tank}) {
             setSensor("off")
             setIcon("https://i.imgur.com/NVTb1n7.png")
             console.log("off")
+            const set_sensor = {PIR_on: false}
+            fetch(url+rID, {method: 'PUT',body: JSON.stringify(set_sensor), headers:{"content-type":"application/json"}})
+            
         }
         else if (sensor == "off") {
             setSensor("on")
             setIcon("https://i.imgur.com/oKjla0f.png")
             console.log("on")
+            const set_sensor = {PIR_on: true}
+            fetch(url+rID, {method: 'PUT',body: JSON.stringify(set_sensor), headers:{"content-type":"application/json"}})
         }
     }
 

@@ -1,7 +1,25 @@
 import React from 'react'
 import '../styles/Card.css'
 
-const Card = ({name, mode, pet_status}) => {
+const Card = ({rID, mode, pet_status}) => {
+    
+    const ChangerIDtoName = () => {
+        if (rID == 0){
+            return "Kitchen"
+        }
+        else if (rID == 1){
+            return "Living room"
+        }
+        else if (rID == 2){
+            return "Bedroom"
+        }
+        else if (rID == 3){
+            return "Study room"
+        }
+    }
+
+    let name = ChangerIDtoName();
+
     const icon = () => {
         if (name == "Kitchen") {
             return "https://cdn-icons-png.flaticon.com/512/3474/3474313.png"
@@ -11,6 +29,9 @@ const Card = ({name, mode, pet_status}) => {
         }
         else if (name == "Bedroom") {
             return "https://uxwing.com/wp-content/themes/uxwing/download/household-and-furniture/double-bed-icon.png"
+        }
+        else if (name == "Study room") {
+            return "https://cdn3.iconfinder.com/data/icons/education-181/128/education_final-09-512.png"
         }
     }
 
