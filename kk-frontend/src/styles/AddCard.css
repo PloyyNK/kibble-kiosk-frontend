@@ -1,0 +1,25 @@
+.card-container {
+    width: 23rem;
+    height: 25rem;
+    background: #EDC988;
+    border-radius: 3rem;
+    opacity: 0.8;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card-container img {
+    width: 9rem;
+}
+
+p {
+    color: #132743;
+    font-size: 2rem;
+}
+
+.confirm {
+    margin-top: 1rem;
+    background-color: transparent;
+    font-size: 2rem;
+}

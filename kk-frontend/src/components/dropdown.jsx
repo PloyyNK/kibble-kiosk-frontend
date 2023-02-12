@@ -11,8 +11,9 @@ const Icon = () => {
   );
 };
 
+
 const Dropdown = ({ placeHolder ,options ,isMulti,ShowMenu,SetShowMenu,SelectedValue,SetSelectedValue}) => {
-  
+ 
 
   useEffect(() => {
     const handler = () => { SetShowMenu(false); };
@@ -86,9 +87,10 @@ const Dropdown = ({ placeHolder ,options ,isMulti,ShowMenu,SetShowMenu,SelectedV
     return SelectedValue.value === option.value;
   };
 
-  const printBruh = (num) => {
+  const printBruh = (num, value) => {
     return (e) => {
-      console.log(num, "bruh")
+      console.log(num, value)
+      callback(num)
     }
   }
 
@@ -106,11 +108,12 @@ const Dropdown = ({ placeHolder ,options ,isMulti,ShowMenu,SetShowMenu,SelectedV
 
         <div className="dropdown-menu">
           {options.map((option) => (
+
             <div 
               onClick={() => onItemClick(option)} 
               key={option.value} 
               className={`dropdown-item ${isSelected(option) && "selected"}`}
-            >
+
               <b>{option.label}</b>
             </div>
           ))}

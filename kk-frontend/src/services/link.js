@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = "http://ecourse.cpe.ku.ac.th/exceed12/"
+const api = "https://ecourse.cpe.ku.ac.th/exceed12"
 
 export async function removeDevice(roomId) {
   const result = await axios.delete(`/${api}/removedevice/${roomId}`);
