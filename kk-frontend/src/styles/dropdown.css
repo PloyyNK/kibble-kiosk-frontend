@@ -17,6 +17,11 @@
     margin-left: 5px;
   }
 
+  .dropdown-item.selected {
+    background-color: #EDC988;
+    color: #000000;
+}
+
   .dropdown-menu {
     position: absolute;
     transform: translateY(4px);
@@ -33,5 +38,21 @@
   }
 
     .dropdown-item:hover {
-        background-color: #9fc3f870;
+        background-color: #fce1b0;
+    }
+    .dropdown-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .dropdown-tag-item {
+        background-color: #ddd;
+        padding: 2px 4px;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+    }
+    .dropdown-tag-close {
+        display: flex;
+        align-items: center;
     }

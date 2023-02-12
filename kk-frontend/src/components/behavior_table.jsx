@@ -1,4 +1,5 @@
 import React from "react";
+// import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Itim&display=swap%27)
 import { useState } from "react";
 import '../styles/behavior_table.css';
 import {get_room_time} from "../services/link"
@@ -23,23 +24,9 @@ const TotalTimeData = [ // Total time data
     },
 ]
 
-const DeviceData = [ // Device data
-    {
-        "tray_level": true,
-        "tank_level": false,
-        "auto_refill": true,
-        "PIR_on": true,
-        "room_id": 1,
-        "mannual_refill": false,
-        "pet_active": true,
-    }
-]
-
-
-
-
-
 const Behavior_table = () => {
+    const [showMenu, setShowMenu] = useState(false);
+    const [selectedValue, setSelectedValue] = useState({value:null,label:"Select..."});
 
     const [totoal_time_data, setData] = useState(TotalTimeData); // Total time data
 
@@ -55,9 +42,11 @@ const Behavior_table = () => {
         { value: 'total_time_year', label: ' Year' },
     ];
 
+
+
     return (
         <div className="background">
-            <Dropdown placeHolder="Select..." options={options}/>
+            <Dropdown placeHolder="Select..." options={options} ShowMenu = {showMenu} SetShowMenu = {setShowMenu} SelectedValue = {selectedValue} SetSelectedValue = {setSelectedValue} />
             <br></br>
             <h1>Behavior Table</h1>
             <div className="block_table">
@@ -73,7 +62,7 @@ const Behavior_table = () => {
                                 <div><b className="tableData">{val.room_id}</b></div>
                             </td>
                             <td className="totaltime_data">
-                                <div><b className="tableData">{val.total_time_today}</b></div>
+                                <div><b className="tableData">{val[selectedValue.value]}</b></div>
                             </td>
                         </tr>
                       )
