@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Behavior_table from './components/behavior_table'
@@ -10,10 +11,14 @@ import AddCard from './components/AddCard'
 import Dropdown from './components/dropdown'
 import { getAllData } from './services/link.js'
 import { useEffect } from 'react'
+import TopNavbar from './components/TopNavbar';
+// import Button from './components/FeedMe';
+import Home from './pages/Home';
+import About from './pages/About';
+
+
 
 function App() {
-  // let active = is_pet_active(0)
-  // console.log(active)
 
   // let data = JSON.stringify(getAllData(0))
   const [data,setData] = useState(null)
@@ -25,7 +30,7 @@ function App() {
 
 
   // useEffect(()=>{
-  //   const url = "https://ecourse.cpe.ku.ac.th/exceed12/getdata/all/0"
+  //   const url = "https://ecourse.cpe.ku.ac.th/exceed12/getdata/all/3"
   //   fetch(url).then((res) => {
   //   return res.json()
   // }).then(data => {
@@ -41,17 +46,24 @@ function App() {
   
   return (
 
-    <div>
-        {/* <AddCard /> */}
-        <Card rID={1} mode="Auto" pet_status="true" />
-        <BigCard rID={1} tank="true"/>
-        <Behavior_table/>
-        {/* <Log_table/>  */}
-        
-        {/* <p>{data}</p> */}
-        hi
-    </div>
 
+    <div>
+      <TopNavbar />
+      {/* <Home /> */}
+      {/* <AddCard /> */}
+      {/* <Card rID={rID} mode={mode} pet_status={pet_status} /> */}
+      {/* <BigCard rID={rID} tank={tank}/> */}
+      {/* <Card rID={1} mode="Auto" pet_status="true" /> */}
+      {/* <BigCard rID={1} tank={"true"}/> */}
+      {/* <Behavior_table/> */}
+      {/* <Log_table/>  */}
+      
+      {/* <p>{data}</p> */}
+            
+      {/* <Button /> */}
+    
+      {/* <About /> */}
+    </div>
   )
   
 }
