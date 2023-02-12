@@ -1,0 +1,55 @@
+table {
+    width: 800px;
+    height: 200px;
+}
+
+/* 
+Text #132743
+2 #D7385E
+3 #EDC988 
+4 #F8EFD4
+*/
+.tableHeader {
+    font-size: 2rem;
+}
+
+.tableData {
+    font-size: 1.3rem;
+}
+div {
+    color : #132743;
+}
+th {
+  border-bottom: 1px solid black;
+}
+    
+td {
+    
+    text-align: center;
+}
+
+.totaltime_data {
+    background-color: #dbb671;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.totaltime_data:hover {
+    background-color: #cba153;
+    animation: fadein 1s;
+}
+
+.block_table {
+    background-color: #EDC988;
+    border-radius: 20px;
+    box-shadow: 10px 10px #BB9E6A;
+    margin-top: 70px;
+}
+
+.background {
+    background-color: #F8EFD4;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    padding: 20px;
+}
