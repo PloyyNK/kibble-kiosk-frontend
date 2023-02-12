@@ -30,10 +30,10 @@ function BigCard({rID, tank, setId}) {
     const name = ChangerIDtoName();
 
     let TankTranslate = () => {
-        if (tank == 'true') {
+        if (tank) {
             return "GOOD"
         } 
-        else if (tank == 'false') {
+        else{
             return "WARNING"
         }
     }

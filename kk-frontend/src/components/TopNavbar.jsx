@@ -76,7 +76,6 @@ const TopNavbar = () => {
       {currentId === -1 && data && data.map((value, index) => (<div className="device"><Card rID={value.room_id} mode={value.auto_refill} pet_status={value.pet_active} index={index} setId={setCurrentId}/></div>))}
         <div className="device"><AddCard /></div> 
       {currentId !== -1 ? <BigCard rID={data[currentId].room_id} tank={data[currentId].tank_level} setId={setCurrentId}/> : console.log("No")}
-    {/* <BigCard rID={0} tank={"true"}/> */}
     </div>
 
     <div class="pets" id="pets">
