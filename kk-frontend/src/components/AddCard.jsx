@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import '../styles/AddCard.css'
-import Dropdown from './dropdown'
+import DropdownRoom from './DropdownRoom'
 
 const AddCard = () => {
 
@@ -45,7 +45,7 @@ const AddCard = () => {
     <div className='card-container'>
             <img src="https://i.imgur.com/LzHvOK9.png" alt="add room" />
             <p><b>Add new device</b></p>
-            <Dropdown className='dropdown' placeHolder="Select your room..." options={rooms} value={room} callback={callback}/>
+            <DropdownRoom className='dropdown' placeHolder="Select your room..." options={rooms} value={room} callback={callback}/>
             <button disabled={room === -1} className='confirm' onClick={Submit} type="submit">Confirm</button>
     </div>
   )
