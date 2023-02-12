@@ -11,6 +11,7 @@ import BigCard from '../components/BigCard'
 import AddCard from "./AddCard";
 // import { Link } from "react-router-dom";
 // import Button from "./Button";
+import Behavior_table from "../components/behavior_table"
 
 const TopNavbar = () => {
 
@@ -79,8 +80,9 @@ const TopNavbar = () => {
     </div>
 
     <div class="pets" id="pets">
-    <h2>PETS'S BEHAVIOR</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero.</p>
+      <div className="table-pet">
+        <Behavior_table />
+      </div>
     </div>
 
     </div>

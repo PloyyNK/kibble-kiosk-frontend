@@ -102,8 +102,8 @@ function BigCard({rID, tank, setId}) {
     
     if (mode == "Manual") { // add feed me button
         return (
-            <div onClick={() => setId(-1)} className='bcontainer'>
-                <div className='petfood'><img src="https://i.imgur.com/GM1h9I2.png" alt="pet food" /></div>
+            <div  className='bcontainer'>
+                <div onClick={() => setId(-1)} className='petfood'><img src="https://i.imgur.com/GM1h9I2.png" alt="pet food" /></div>
                 <div className='information'>
                     <div className='title'><h1>{name}</h1></div>
                     <div className='description'>
@@ -133,8 +133,8 @@ function BigCard({rID, tank, setId}) {
     }
     else if (mode == "Auto") {
         return (
-            <div onClick={() => setId(-1)} className='bcontainer'>
-                <div className='petfood'><img src="https://i.imgur.com/GM1h9I2.png" alt="pet food" /></div>
+            <div className='bcontainer'>
+                <div onClick={() => setId(-1)} className='petfood'><img src="https://i.imgur.com/GM1h9I2.png" alt="pet food" /></div>
                 <div className='information'>
                     <div className='title'><h1>{name}</h1></div>
                     <div className='description'>

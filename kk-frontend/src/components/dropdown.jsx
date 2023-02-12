@@ -10,7 +10,7 @@ const Icon = () => {
   );
 };
 
-const Dropdown = ({ placeHolder ,options, callback, value}) => {
+const DropdownRoom = ({ placeHolder ,options, callback, value}) => {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
@@ -60,4 +60,4 @@ const Dropdown = ({ placeHolder ,options, callback, value}) => {
   );
 };
 
-export default Dropdown;
+export default DropdownRoom;
